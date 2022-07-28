@@ -1,0 +1,14 @@
+{ "columns":38,
+ "image":"swampStructures_ [bridgeAnimations].png",
+ "imageheight":128,
+ "imagewidth":608,
+ "margin":0,
+ "name":"estruturas",
+ "spacing":0,
+ "tilecount":304,
+ "tiledversion":"1.8.0",
+ "tileheight":16,
+ "tilewidth":16,
+ "type":"tileset",
+ "version":"1.8"
+}
