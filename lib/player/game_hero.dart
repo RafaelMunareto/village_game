@@ -18,7 +18,7 @@ class GameHero extends SimplePlayer with ObjectCollision, Lighting {
                 idleRight: HeroSpriteSheet.heroIdRight,
                 runRight: HeroSpriteSheet.heroRunRight,
                 runLeft: HeroSpriteSheet.heroRunLeft),
-            speed: 80) {
+            speed: 75) {
     setupCollision(
       CollisionConfig(
         collisions: [
@@ -77,16 +77,6 @@ class GameHero extends SimplePlayer with ObjectCollision, Lighting {
       animationDown: AttackSpritesSheet.attackBottom,
       animationUp: AttackSpritesSheet.attackTop,
     );
-  }
-
-  @override
-  void render(Canvas canvas) {
-    drawDefaultLifeBar(canvas,
-        borderRadius: BorderRadius.circular(5),
-        borderWidth: 2.0,
-        height: 2,
-        align: const Offset(0, -3));
-    super.render(canvas);
   }
 
   @override

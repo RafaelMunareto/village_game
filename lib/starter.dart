@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:village/decoration/lamp.dart';
 import 'package:village/enimies/bispo/bispo_enimy.dart';
 import 'package:village/enimies/richard/richard_enimy.dart';
+import 'package:village/interface/player_interface.dart';
 import 'package:village/player/game_hero.dart';
 
 const double tileSize = 16;
@@ -38,6 +39,11 @@ class _StarterState extends State<Starter> {
         'lamp': ((properties) => Lamp(properties.position))
       }),
       player: GameHero(Vector2(21 * tileSize, 13 * tileSize)),
+      overlayBuilderMap: {
+        PlayerInterface.overlayKey: (context, game) =>
+            PlayerInterface(game: game)
+      },
+      initialActiveOverlays: const [PlayerInterface.overlayKey],
       cameraConfig: CameraConfig(
           moveOnlyMapArea: true,
           zoom: 4.0,
