@@ -1,0 +1,14 @@
+{ "columns":11,
+ "image":"swampObjects_.png",
+ "imageheight":192,
+ "imagewidth":176,
+ "margin":0,
+ "name":"decoration",
+ "spacing":0,
+ "tilecount":132,
+ "tiledversion":"1.8.0",
+ "tileheight":16,
+ "tilewidth":16,
+ "type":"tileset",
+ "version":"1.8"
+}

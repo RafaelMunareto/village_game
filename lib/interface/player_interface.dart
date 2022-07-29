@@ -56,7 +56,8 @@ class _PlayerInterfaceState extends State<PlayerInterface> {
               decoration: BoxDecoration(
                   color: Colors.black, borderRadius: BorderRadius.circular(5)),
             ),
-            Container(
+            AnimatedContainer(
+              duration: const Duration(milliseconds: 300),
               padding: const EdgeInsets.all(16),
               width: widthCurrent,
               height: 30,

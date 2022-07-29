@@ -1,6 +1,8 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
+import 'package:village/decoration/chees.dart';
 import 'package:village/decoration/lamp.dart';
+import 'package:village/decoration/mushroom.dart';
 import 'package:village/enimies/bispo/bispo_enimy.dart';
 import 'package:village/enimies/richard/richard_enimy.dart';
 import 'package:village/interface/player_interface.dart';
@@ -36,7 +38,9 @@ class _StarterState extends State<Starter> {
       map: TiledWorldMap('maps/map2.json', objectsBuilder: {
         'bispo': (properties) => BispoEnemy(properties.position),
         'richard': (properties) => RichardEnemy(properties.position),
-        'lamp': ((properties) => Lamp(properties.position))
+        'lamp': ((properties) => Lamp(properties.position)),
+        'chess': ((properties) => Chess(properties.position)),
+        'mushroom': ((properties) => MushRoom(properties.position))
       }),
       player: GameHero(Vector2(21 * tileSize, 13 * tileSize)),
       overlayBuilderMap: {

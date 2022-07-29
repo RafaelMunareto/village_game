@@ -158,9 +158,42 @@
          "visible":true,
          "x":0,
          "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":11,
+         "name":"chess",
+         "objects":[
+                {
+                 "height":16,
+                 "id":27,
+                 "name":"chess",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":305,
+                 "y":109.5
+                }, 
+                {
+                 "height":16,
+                 "id":30,
+                 "name":"mushroom",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":330,
+                 "y":328
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
         }],
- "nextlayerid":10,
- "nextobjectid":25,
+ "nextlayerid":12,
+ "nextobjectid":31,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.8.0",
@@ -177,6 +210,10 @@
         {
          "firstgid":1027,
          "source":"objetos.json"
+        }, 
+        {
+         "firstgid":1387,
+         "source":"decoration.json"
         }],
  "tilewidth":16,
  "type":"map",

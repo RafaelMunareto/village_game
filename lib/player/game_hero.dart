@@ -31,7 +31,10 @@ class GameHero extends SimplePlayer with ObjectCollision, Lighting {
     );
 
     setupLighting(LightingConfig(
-        radius: tileSize * 1.5, color: Colors.transparent, withPulse: false));
+        radius: tileSize * 1.5,
+        color: Colors.transparent,
+        withPulse: false,
+        blurBorder: 16));
   }
 
   @override
