@@ -12,6 +12,7 @@ dependencies:
     sdk: flutter
 
   bonfire: ^2.6.6
+  flame:
 
   cupertino_icons: ^1.0.2
 

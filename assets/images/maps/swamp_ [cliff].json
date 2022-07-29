@@ -70,15 +70,26 @@
              "name":"",
              "objects":[
                     {
-                     "height":6.25,
-                     "id":1,
+                     "height":7.125,
+                     "id":2,
                      "name":"",
                      "rotation":0,
                      "type":"",
                      "visible":true,
-                     "width":6.375,
-                     "x":10.125,
-                     "y":9.75
+                     "width":5.375,
+                     "x":9.125,
+                     "y":9
+                    }, 
+                    {
+                     "height":4.5,
+                     "id":3,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":1.5,
+                     "x":14.5,
+                     "y":11.625
                     }],
              "opacity":1,
              "type":"objectgroup",
@@ -937,15 +948,15 @@
              "name":"",
              "objects":[
                     {
-                     "height":9.375,
-                     "id":3,
+                     "height":12.125,
+                     "id":4,
                      "name":"",
                      "rotation":0,
                      "type":"",
                      "visible":true,
-                     "width":14.875,
-                     "x":0.5,
-                     "y":0.625
+                     "width":15.125,
+                     "x":0.375,
+                     "y":-0.625
                     }],
              "opacity":1,
              "type":"objectgroup",
@@ -963,15 +974,15 @@
              "name":"",
              "objects":[
                     {
-                     "height":11.75,
-                     "id":3,
+                     "height":11.625,
+                     "id":4,
                      "name":"",
                      "rotation":0,
                      "type":"",
                      "visible":true,
-                     "width":15.5,
-                     "x":-0.375,
-                     "y":0.125
+                     "width":16.625,
+                     "x":-0.25,
+                     "y":-0.375
                     }],
              "opacity":1,
              "type":"objectgroup",
