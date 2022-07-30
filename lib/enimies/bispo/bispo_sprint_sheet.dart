@@ -1,7 +1,7 @@
 import 'package:bonfire/bonfire.dart';
 
 class BispoEnemySpriteSheet {
-  static Future<SpriteAnimation> get heroIdLeft => SpriteAnimation.load(
+  static Future<SpriteAnimation> get idLeft => SpriteAnimation.load(
         'enemies/bispo.png',
         SpriteAnimationData.sequenced(
           amount: 4,
@@ -10,7 +10,7 @@ class BispoEnemySpriteSheet {
           texturePosition: Vector2(96, 0),
         ),
       );
-  static Future<SpriteAnimation> get heroIdRight => SpriteAnimation.load(
+  static Future<SpriteAnimation> get idRight => SpriteAnimation.load(
         'enemies/bispo.png',
         SpriteAnimationData.sequenced(
           amount: 4,
@@ -20,7 +20,7 @@ class BispoEnemySpriteSheet {
         ),
       );
 
-  static Future<SpriteAnimation> get heroRunRight => SpriteAnimation.load(
+  static Future<SpriteAnimation> get runRight => SpriteAnimation.load(
         'enemies/bispo.png',
         SpriteAnimationData.sequenced(
           amount: 4,
@@ -30,7 +30,7 @@ class BispoEnemySpriteSheet {
         ),
       );
 
-  static Future<SpriteAnimation> get heroRunLeft => SpriteAnimation.load(
+  static Future<SpriteAnimation> get runLeft => SpriteAnimation.load(
         'enemies/bispo.png',
         SpriteAnimationData.sequenced(
           amount: 4,

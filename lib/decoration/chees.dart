@@ -1,9 +1,11 @@
+// ignore_for_file: unused_element
+
 import 'package:bonfire/bonfire.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:village/decoration/decoration_sprit_sheet.dart';
+import 'package:village/decoration/mushroom.dart';
 import 'package:village/player/game_hero.dart';
-import 'package:village/starter.dart';
+import 'package:village/game.dart';
 
 class Chess extends GameDecoration with ObjectCollision, TapGesture {
   bool _playerIsClosed = false;
@@ -73,22 +75,16 @@ class Chess extends GameDecoration with ObjectCollision, TapGesture {
   @override
   void onTap() {
     if (_playerIsClosed) {
-      _showDialog();
+      gameRef.add(MushRoom(position.translate(tileSize, 0)));
     }
   }
 
   @override
-  void onTapCancel() {
-    // TODO: implement onTapCancel
-  }
+  void onTapCancel() {}
 
   @override
-  void onTapDown(int pointer, Vector2 position) {
-    // TODO: implement onTapDown
-  }
+  void onTapDown(int pointer, Vector2 position) {}
 
   @override
-  void onTapUp(int pointer, Vector2 position) {
-    // TODO: implement onTapUp
-  }
+  void onTapUp(int pointer, Vector2 position) {}
 }

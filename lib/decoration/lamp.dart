@@ -1,6 +1,6 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
-import 'package:village/starter.dart';
+import 'package:village/game.dart';
 
 class Lamp extends GameDecoration with Lighting {
   Lamp(Vector2 position)

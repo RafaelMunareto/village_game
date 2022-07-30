@@ -1,10 +1,11 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:village/enimies/richard/richard_sprint_sheet.dart';
-import 'package:village/starter.dart';
+import 'package:village/game.dart';
 import 'package:village/utils/attack/attack_sprite.dart';
 
-class RichardEnemy extends SimpleEnemy with ObjectCollision {
+class RichardEnemy extends SimpleEnemy
+    with ObjectCollision, AutomaticRandomMovement {
   bool canMove = true;
 
   RichardEnemy(Vector2 position)
@@ -35,12 +36,16 @@ class RichardEnemy extends SimpleEnemy with ObjectCollision {
   @override
   void update(double dt) {
     if (canMove) {
-      seeAndMoveToPlayer(
-          closePlayer: (player) {
-            _executeAttack();
-          },
-          radiusVision: tileSize * 4,
-          margin: 4);
+      seePlayer(observed: (player) {
+        seeAndMoveToPlayer(
+            closePlayer: (player) {
+              _executeAttack();
+            },
+            radiusVision: tileSize * 4,
+            margin: 4);
+      }, notObserved: () {
+        runRandomMovement(dt);
+      });
     }
     super.update(dt);
   }
