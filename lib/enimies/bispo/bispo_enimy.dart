@@ -83,18 +83,20 @@ class BispoEnemy extends SimpleEnemy
 
   @override
   void receiveDamage(AttackFromEnum attacker, double damage, identify) {
-    canMove = false;
-    final receiveDamageAnimation = lastDirectionHorizontal == Direction.left
-        ? BispoEnemySpriteSheet.recevieDamageLeft
-        : BispoEnemySpriteSheet.recevieDamageRight;
-    animation?.playOnce(
-      receiveDamageAnimation,
-      runToTheEnd: true,
-      onFinish: () {
-        canMove = true;
-      },
-    );
-    super.receiveDamage(attacker, damage, identify);
+    if (!isDead) {
+      canMove = false;
+      final receiveDamageAnimation = lastDirectionHorizontal == Direction.left
+          ? BispoEnemySpriteSheet.recevieDamageLeft
+          : BispoEnemySpriteSheet.recevieDamageRight;
+      animation?.playOnce(
+        receiveDamageAnimation,
+        runToTheEnd: true,
+        onFinish: () {
+          canMove = true;
+        },
+      );
+      super.receiveDamage(attacker, damage, identify);
+    }
   }
 
   void _executeAttack() {

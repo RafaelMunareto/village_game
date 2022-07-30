@@ -78,19 +78,21 @@ class RichardEnemy extends SimpleEnemy
 
   @override
   void receiveDamage(AttackFromEnum attacker, double damage, identify) {
-    canMove = false;
-    if (lastDirectionHorizontal == Direction.left) {
-      animation?.playOnce(RichardEnemySpriteSheet.recevieDamageLeft,
-          runToTheEnd: true, onFinish: () {
-        canMove = true;
-      });
-    } else {
-      animation?.playOnce(RichardEnemySpriteSheet.recevieDamageRight,
-          runToTheEnd: true, onFinish: () {
-        canMove = true;
-      });
+    if (!isDead) {
+      canMove = false;
+      if (lastDirectionHorizontal == Direction.left) {
+        animation?.playOnce(RichardEnemySpriteSheet.recevieDamageLeft,
+            runToTheEnd: true, onFinish: () {
+          canMove = true;
+        });
+      } else {
+        animation?.playOnce(RichardEnemySpriteSheet.recevieDamageRight,
+            runToTheEnd: true, onFinish: () {
+          canMove = true;
+        });
+      }
+      super.receiveDamage(attacker, damage, identify);
     }
-    super.receiveDamage(attacker, damage, identify);
   }
 
   void _executeAttack() {
